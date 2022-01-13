@@ -1,0 +1,8 @@
+I"Å<p>This is a simple step-by-step guide to setting up Armadillo C++ on your Mac. I will be starting from <b> very beginning </b> assuming you were handed a brand new laptop and go through all the nitty-gritty details I had to go through in order to set this up myself. Letâ€™s begin!</p>
+
+<h1 id="download-install-xcode">Download Install Xcode</h1>
+
+<h2 id="test">Test</h2>
+
+<p><img src="/img/posts/setup-armadillo/1step.png" alt="XCode Download" /></p>
+:ET

@@ -1,0 +1,18 @@
+I"�<p>This is a simple step-by-step guide to setting up Armadillo C++ on your Mac. I will be starting from the <b> very beginning </b> assuming you were handed a brand new laptop with nothing installed on it. This guide will go through all the nitty-gritty details. Let’s begin!</p>
+
+<h1 id="download--install-xcode">Download &amp; Install Xcode</h1>
+
+<ul>
+<li>Open up your App Store and search for "xcode"</li>
+<li>Click on "GET"/"INSTALL" to start your download</li>
+</ul>
+
+<p><img src="/img/posts/setup-armadillo/1step.png" alt="XCode Download" /></p>
+
+<h2 id="downloading-xcode-for-older-macs">Downloading Xcode for older Macs</h2>
+<p>If you have an older Mac you can still download the version of Xcode that is compatible with it at <a href="https://xcodereleases.com"> https://xcodereleases.com </a>.</p>
+
+<p>For instance, the machine I’m downloading this software on is a 2013 Macbook Pro running on MacOS Catalina 10.15. This Mac is not compatible with the latest version of Xcode that’s offered in the App Store, so I had to download the 12.4 Release version.</p>
+
+<p><img src="/img/posts/setup-armadillo/older-xcode.png" alt="Older XCode Download" /></p>
+:ET
