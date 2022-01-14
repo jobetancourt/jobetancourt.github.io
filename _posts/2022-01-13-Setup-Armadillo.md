@@ -126,4 +126,57 @@ In the "Language" dropdown select "C++".
 
 <img src="/img/posts/setup-armadillo/create-cpp-project.png" alt="" width="100%" height="auto"/>
 
+Select a location where you want your project files to live in your computer and click "Create".
+
+You will be presented with the following xcode project layout:
+
+<img src="/img/posts/setup-armadillo/xcode-init-layout.png" alt="" width="100%" height="auto"/>
+
+### Adding Header Search Paths
+
+We will be adding the Armadillo search paths to our project.
+
+1. Click on your project name on the left-side panel. 
+2. Click on the "Build Settings" tab 
+3. In the search bar type: "Header Search Paths"
+4. Double-click the whitespace next to "Header Search Paths". An empty whitebox should appear below.
+5. Click on the ```+``` symbol on the bottom left of that window
+6. Add: ```/opt/local/include``` and hit ```return```
+
+<img src="/img/posts/setup-armadillo/header-search-paths.png" alt="" width="100%" height="auto"/>
+
+This is how it should look when you're finished:
+
+<img src="/img/posts/setup-armadillo/header-search-path-done.png" alt="" width="100%" height="auto"/>
+
+### Adding Library Search Paths
+
+Staying in the "Build Settings" tab search for "Library Search Paths" and add ```/opt/local/lib``` similar to the Header Search Path was added. This is how it should look once you're done:
+
+<img src="/img/posts/setup-armadillo/library-search-paths.png" alt="" width="100%" height="auto"/>
+
+### Adding Linker Flags
+
+Still within the "Build Settings" tab search for "Other Linker Flags" and add ```-larmadilo``` similar to how the Header Search Path and Library Search Path was added. This is how it should look once you're done:
+
+<img src="/img/posts/setup-armadillo/linker-flag.png" alt="" width="100%" height="auto"/>
+
+# Using Armadillo functions in your code!
+
+We should be set to use Armadillo functions now! On the left-side panel under your project's name folder, there should be some C++ starter code ```main.cpp``` click on it to open it.
+
+<img src="/img/posts/setup-armadillo/starting-main.png" alt="" width="100%" height="auto"/>
+
+Add the headers:
+```cpp
+ #include "armadillo"
+ using namespace arma;
+```
+And test out many of the convenient functions that Armadillo C++ has to offer. You can get familiar with these functions through their documentation page: <a href="http://arma.sourceforge.net/docs.html">http://arma.sourceforge.net/docs.html</a>
+
+You can see me create and print a 3 x 3 matrix of zeros below.
+
+<img src="/img/posts/setup-armadillo/armadillo-test.png" alt="" width="100%" height="auto"/>
+
+
 <!-- <img src="/img/posts/setup-armadillo/.png" alt="" width="" height="auto"/> -->
