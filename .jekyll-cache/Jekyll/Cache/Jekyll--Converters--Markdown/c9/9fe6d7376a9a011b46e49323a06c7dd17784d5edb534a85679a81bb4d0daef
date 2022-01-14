@@ -1,0 +1,181 @@
+I"�/<p>This is a simple and in-depth step-by-step guide to setting up Armadillo C++ on your Mac using Xcode IDE, command line tools, and installation via MacPorts. I will be starting from the <b> very beginning </b> assuming you were handed a factory-reset laptop with nothing installed on it. This guide will go through all the nitty-gritty details. Let’s begin!</p>
+
+<h1 id="download--install-xcode">Download &amp; Install Xcode</h1>
+
+<ul>
+<li>Open up your App Store and search for "xcode"</li>
+<li>Click on "GET"/"INSTALL" to start your download</li>
+</ul>
+
+<!-- ![XCode Download](/img/posts/setup-armadillo/1step.png) -->
+<p><img src="/img/posts/setup-armadillo/1step.png" alt="XCode App Store" width="100%" height="auto" /></p>
+
+<h2 id="downloading-xcode-for-older-macs">Downloading Xcode for older Macs</h2>
+<p>If you have an older Mac you can still download the version of Xcode that is compatible with it at <a href="https://xcodereleases.com"> https://xcodereleases.com </a>.</p>
+
+<p>For instance, the machine I’m downloading this software on is a 2013 Macbook Pro running on MacOS Catalina 10.15. This Mac is not compatible with the latest version of Xcode that’s offered in the App Store, so I had to download the 12.4 Release version instead.</p>
+
+<!-- ![Older XCode Download](/img/posts/setup-armadillo/older-xcode.png) -->
+<p><img src="/img/posts/setup-armadillo/older-xcode.png" alt="Older XCode Download" width="100%" height="auto" /></p>
+
+<h2 id="installing-xcode">Installing Xcode</h2>
+
+<p>Once its finished downloading, double-click on the package to start the installation process. You may see some loading windows show up like the ones below.</p>
+
+<!-- ![XCode-install-1](/img/posts/setup-armadillo/install-xcode1.png)
+![XCode-install-2](/img/posts/setup-armadillo/install-xcode2.png) -->
+<p><img src="/img/posts/setup-armadillo/install-xcode1.png" alt="Xcode Install 1" width="100%" height="auto" />
+<img src="/img/posts/setup-armadillo/install-xcode2.png" alt="Xcode Install 2" width="100%" height="auto" /></p>
+
+<h3 style="color:red;">WARNING:</h3>
+<p>If you see your Xcode program installed somewhere <em>besides</em> your “Applications” folder, you will have to drag and drop it in “Applications” before moving on.</p>
+
+<!-- ![Move-XCode](/img/posts/setup-armadillo/move-xcode-to-applications.png) -->
+<p><img src="/img/posts/setup-armadillo/move-xcode-to-applications.png" alt="Move Xcode" width="100%" height="auto" /></p>
+
+<h2 id="download-command-line-developer-tools">Download Command-Line Developer Tools</h2>
+
+<p>Open Terminal. You can do this by opening Launchpad and search for “Terminal” or press <code class="language-plaintext highlighter-rouge">Cmd + [Space-Bar]</code> and search for “Terminal” in the Spotlight Search.</p>
+
+<p>Once your terminal is open, type in: <code class="language-plaintext highlighter-rouge">xcode-select --install</code> and press <code class="language-plaintext highlighter-rouge">return</code> on your keyboard. You may have to put in your password that you use to sign in to your computer.</p>
+
+<!-- ![Terminal Install Cmd Line Tools](/img/posts/setup-armadillo/cmd-line-tools-install.png) -->
+<p><img src="/img/posts/setup-armadillo/cmd-line-tools-install.png" alt="Terminal Install Command-line Tools" width="100%" height="auto" /></p>
+
+<p>A window should pop up asking if you want to install the command-line developer tools. Click on the “Install” button.</p>
+
+<!-- ![cmd line install prompt](/img/posts/setup-armadillo/install-prompt-cmd-line.png) -->
+<p><img src="/img/posts/setup-armadillo/install-prompt-cmd-line.png" alt="Command-Line Install Prompt" width="100%" height="auto" /></p>
+
+<p>Once it has finished, you will now have to agree to Apple/Xcode Licence. Go back to your terminal window and type in : <code class="language-plaintext highlighter-rouge">sudo xcodebuild -license</code> and hit <code class="language-plaintext highlighter-rouge">return</code> on your keyboard. You may be prompted for your password used to sign in to your computer again.</p>
+
+<!-- ![xcode license](/img/posts/setup-armadillo/xcode-license.png)
+![Terms and Conditions Xcode](/img/posts/setup-armadillo/terms-conditions.png) -->
+
+<p><img src="/img/posts/setup-armadillo/xcode-license.png" alt="xcode license" width="100%" height="auto" />
+<img src="/img/posts/setup-armadillo/terms-conditions.png" alt="Terms and Conditions Xcode" width="100%" height="auto" /></p>
+
+<p>The Terms and Conditions should show up on the Terminal, read and scroll through the entire documenation and type in <code class="language-plaintext highlighter-rouge">agree</code> in the terminal if you choose to agree to the terms.</p>
+
+<h1 id="install-macports">Install MacPorts</h1>
+
+<p>You will now have to install MacPorts. Go to <a href="https://www.macports.org/install.php"> https://www.macports.org/install.php </a>. Under “Quickstart” click on one of the bulleted links based on your system and follow the corresponding directions which are given below those links.</p>
+
+<!-- ![MacPorts Link](/img/posts/setup-armadillo/macports-link.png) -->
+<p><img src="/img/posts/setup-armadillo/macports-link.png" alt="" width="100%" height="auto" /></p>
+
+<p>Once your download MacPorts to your computer, open the MacPorts package. Most likely it is in your downloads folder. You will then go through the steps for installation. Go through the necessary prompts.</p>
+
+<center>
+<img src="/img/posts/setup-armadillo/macports-pkg.png" alt="MacPorts Pkg" width="50%" height="400" />
+</center>
+
+<p><img src="/img/posts/setup-armadillo/macports-install.png" alt="MacPorts Install" width="100%" height="auto" /></p>
+
+<h1 id="download--install-armadillo-c-library">Download &amp; Install Armadillo C++ Library</h1>
+
+<p>Now that we <em>finally</em> have all those prerequsites out of the way, we will now download our Armadillo C++ libary.</p>
+
+<ul>
+  <li>Go to <a href="http://arma.sourceforge.net/download.html">http://arma.sourceforge.net/download.html</a></li>
+  <li>Scroll down to “Installation Notes”, under the <strong>macOS</strong> bullet-point you will see a link to install via <a href="https://ports.macports.org/search/?q=armadillo">MacPorts</a></li>
+</ul>
+
+<p><img src="/img/posts/setup-armadillo/armadillo-install-page.png" alt="" width="100%" height="auto" /></p>
+
+<ul>
+  <li>Click on the <a href="https://ports.macports.org/port/armadillo/">armadillo</a> link and the follow page should appear:</li>
+</ul>
+
+<p><img src="/img/posts/setup-armadillo/macports-armadillo-cmd.png" alt="" width="100%" height="auto" /></p>
+
+<ul>
+  <li>Copy/Paste the command line to your terminal install Armadillo. The command-line at the time of this writing is <code class="language-plaintext highlighter-rouge">sudo port install armadillo</code></li>
+</ul>
+
+<p><img src="/img/posts/setup-armadillo/armadillo-terminal-cmd-install.png" alt="" width="100%" height="auto" /></p>
+
+<ul>
+  <li>Hit <code class="language-plaintext highlighter-rouge">return</code> and go through the necessary prompts to finish installation</li>
+</ul>
+
+<p>The armadillo files should have been downloaded in the <code class="language-plaintext highlighter-rouge">/opt/locol</code> folder. To double-check, type in your terminal <code class="language-plaintext highlighter-rouge">cd /opt/local/lib</code> and press <code class="language-plaintext highlighter-rouge">return</code>. Then type in <code class="language-plaintext highlighter-rouge">ls</code> and hit <code class="language-plaintext highlighter-rouge">return</code> again. You should see files names like <code class="language-plaintext highlighter-rouge">libarmadillo.dylib</code> and <code class="language-plaintext highlighter-rouge">libhdf5.dylib</code> show up as below:</p>
+
+<center>
+<img src="/img/posts/setup-armadillo/terminal-arma-files-list.png" alt="" width="80%" height="auto" />
+</center>
+
+<h1 id="setup-armadillo-with-xcode">Setup Armadillo with Xcode</h1>
+
+<p>Open up Xcode. One the welcome screen and select “Create a new Xcode project”</p>
+
+<center>
+<img src="/img/posts/setup-armadillo/xcode-welcome.png" alt="" width="80%" height="auto" />
+</center>
+
+<p>A window will pop up saying “Choose a template for your new project:”. Select the “macOS” option that is towards the top of that window and then select the “Command Line Tool” under the Application section of that window. Click the “Next” button.</p>
+
+<p><img src="/img/posts/setup-armadillo/xcode-cmd-line-tool.png" alt="" width="100%" height="auto" /></p>
+
+<p>Fill out the “Product Name:” and “Organization Identfier” (this can be anything you want).
+In the “Language” dropdown select “C++”.</p>
+
+<p><img src="/img/posts/setup-armadillo/create-cpp-project.png" alt="" width="100%" height="auto" /></p>
+
+<p>Select a location where you want your project files to live in your computer and click “Create”.</p>
+
+<p>You will be presented with the following xcode project layout:</p>
+
+<p><img src="/img/posts/setup-armadillo/xcode-init-layout.png" alt="" width="100%" height="auto" /></p>
+
+<h3 id="adding-header-search-paths">Adding Header Search Paths</h3>
+
+<p>We will be adding the Armadillo search paths to our project.</p>
+
+<ol>
+  <li>Click on your project name on the left-side panel.</li>
+  <li>Click on the “Build Settings” tab</li>
+  <li>In the search bar type: “Header Search Paths”</li>
+  <li>Double-click the whitespace next to “Header Search Paths”. An empty whitebox should appear below.</li>
+  <li>Click on the <code class="language-plaintext highlighter-rouge">+</code> symbol on the bottom left of that window</li>
+  <li>Add: <code class="language-plaintext highlighter-rouge">/opt/local/include</code> and hit <code class="language-plaintext highlighter-rouge">return</code></li>
+</ol>
+
+<p><img src="/img/posts/setup-armadillo/header-search-paths.png" alt="" width="100%" height="auto" /></p>
+
+<p>This is how it should look when you’re finished:</p>
+
+<p><img src="/img/posts/setup-armadillo/header-search-path-done.png" alt="" width="100%" height="auto" /></p>
+
+<h3 id="adding-library-search-paths">Adding Library Search Paths</h3>
+
+<p>Staying in the “Build Settings” tab search for “Library Search Paths” and add <code class="language-plaintext highlighter-rouge">/opt/local/lib</code> similar to the Header Search Path was added. This is how it should look once you’re done:</p>
+
+<p><img src="/img/posts/setup-armadillo/library-search-paths.png" alt="" width="100%" height="auto" /></p>
+
+<h3 id="adding-linker-flags">Adding Linker Flags</h3>
+
+<p>Still within the “Build Settings” tab search for “Other Linker Flags” and add <code class="language-plaintext highlighter-rouge">-larmadilo</code> similar to how the Header Search Path and Library Search Path was added. This is how it should look once you’re done:</p>
+
+<p><img src="/img/posts/setup-armadillo/linker-flag.png" alt="" width="100%" height="auto" /></p>
+
+<h1 id="using-armadillo-functions-in-your-code">Using Armadillo functions in your code!</h1>
+
+<p>We should be set to use Armadillo functions now! On the left-side panel under your project’s name folder, there should be some C++ starter code <code class="language-plaintext highlighter-rouge">main.cpp</code> click on it to open it.</p>
+
+<p><img src="/img/posts/setup-armadillo/starting-main.png" alt="" width="100%" height="auto" /></p>
+
+<p>Add the headers:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include "armadillo"
+</span> <span class="k">using</span> <span class="k">namespace</span> <span class="n">arma</span><span class="p">;</span>
+</code></pre></div></div>
+<p>And test out many of the convenient functions that Armadillo C++ has to offer. You can get familiar with these functions through their documentation page: <a href="http://arma.sourceforge.net/docs.html">http://arma.sourceforge.net/docs.html</a></p>
+
+<p>You can see me create and print a 3 x 3 matrix of zeros below.</p>
+
+<p><img src="/img/posts/setup-armadillo/armadillo-test.png" alt="" width="100%" height="auto" /></p>
+
+<h1 id="some-issues">Some Issues…</h1>
+
+<!-- <img src="/img/posts/setup-armadillo/.png" alt="" width="" height="auto"/> -->
+:ET
