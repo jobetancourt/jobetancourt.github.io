@@ -178,11 +178,76 @@ Try some out and Build + Run your code by clicking the big Play Button at the to
 
 <img src="/img/posts/setup-armadillo/armadillo-test.png" alt="" width="100%" height="auto"/>
 
-# Some Issues... Or should I say "Warnings"?
+# Some Issues... or should I say "Warnings"?
 
 If you're like me, when I first Built + Ran my code, it ran successfully but with over 100 warnings popping up, which can be annoying to say the least. This is what it looked like for me:
 
 <img src="/img/posts/setup-armadillo/armadillo-warnings.png" alt="" width="100%" height="auto"/>
 
+Next is a series of steps I personally took to take care of this. Results may vary.
+
+Open Finder. Go to ```View``` and select ```Show Path Bar```.
+
+<center>
+<img src="/img/posts/setup-armadillo/show-path-bar.png" alt="" width="70%" height="auto"/>
+</center>
+
+The path bar should appear on the bottom of the Finder window:
+
+<center>
+<img src="/img/posts/setup-armadillo/path-bar-shown.png" alt="" width="70%" height="auto"/>
+</center>
+
+Double-click on your Disk Drive. In this example, it's "Untitled".
+
+<center>
+<img src="/img/posts/setup-armadillo/untitled-drive.png" alt="" width="70%" height="auto"/>
+</center>
+
+Now press ```Cmd + Shift + . ``` to show *hidden* files. They will appear more transparent than the files that were already shown.
+
+<center>
+<img src="/img/posts/setup-armadillo/hidden-files.png" alt="" width="70%" height="auto"/>
+</center>
+
+Navigate to ```opt/local/include``` in this folder, you should see a folder named ```armadillo_bits```. Right-click on this folder and click on ```Get Info```.
+
+<center>
+<img src="/img/posts/setup-armadillo/armadillo-bits-get-info.png" alt="" width="70%" height="auto"/>
+</center>
+
+At the bottom-right corner of the armadillo_bits Info window you will see a small lock icon, click on it to unlock to apply changes. You will be asked to enter your password.
+
+<center>
+<img src="/img/posts/setup-armadillo/arma-info-password.png" alt="" width="70%" height="auto"/>
+</center>
+
+In the "Sharing & Permissions" section, change the ```admin``` Privilege to ```Read & Write```. Click on the small gear icon and select ```Apply to enclosed items...```.
+
+<center>
+<img src="/img/posts/setup-armadillo/admin-read-write.png" alt="" width="70%" height="auto"/>
+</center>
+
+Go back to Finder and go into the ```armadillo_bits``` folder. Right-click on ```config.hpp``` file and open with Xcode. 
+
+<h5 style="color:red;">WARNING:</h5> Make sure it is just ```config.hpp``` NOT ```arma_config.hpp```.
+
+<center>
+<img src="/img/posts/setup-armadillo/open-config.png" alt="" width="70%" height="auto"/>
+</center>
+
+Within the ```config.hpp``` file, comment out ```#define ARMA_USE_WRAPPER``` line. Save and exit the file.
+
+<center>
+<img src="/img/posts/setup-armadillo/change-config.png" alt="" width="70%" height="auto"/>
+</center>
+
+Go back to to your Xcode C++ armadillo project. Click on ```Product``` and select ```Clean Build Folder```. 
+
+<center>
+<img src="/img/posts/setup-armadillo/clean-build-folder.png" alt="" width="70%" height="auto"/>
+</center>
+
+And that's it! Now when you ```Build + Run``` hopefully you do not get any of those annoying Warnings.
 
 <!-- <img src="/img/posts/setup-armadillo/.png" alt="" width="" height="auto"/> -->
