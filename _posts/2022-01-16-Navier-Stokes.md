@@ -19,6 +19,10 @@ Compared to solid bodies undergoing translational motion, At first this may be t
 Also known as the 'Substantial Derivative".
 
 The fluid element is flowing through cartesian space where the unit vectors along the $$x$$, $$y$$, and $$z$$ axes are $$ \boldsymbol{i} $$, $$ \boldsymbol{j} $$, and $$ \boldsymbol{k} $$, respectfully.
+
+![Fluid Element](/img/posts/cfd-equations/fluid-elem.png)
+<img src="/img/posts/cfd-equations/fluid-elem.png" />
+
 The vector field of a fluid flow is given by
 
 $$
@@ -33,5 +37,5 @@ $$ \frac{d(property)}{dt} \ne 0 $$
 
 where $$property$$ is the fluid's property in question which can be velocity, temperature, density, etc. Obviously, if the flow is *steady* then the change of that property in respect to time (and still within the same location in space) will be $$0$$.
 
-So, now that we have established that this fluid element's velocity changes with time and space let's look at other property that also will change through space and time, say density $$\rho(x, y, z, t)$$.
+So, now that we have established that the fluid element's velocity changes with time and space let's look at another property that also will change through time and space, say density $$\rho(x, y, z, t)$$.
 
