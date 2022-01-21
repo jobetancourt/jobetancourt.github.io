@@ -1,18 +1,21 @@
-I"�
-<p>Imagine a fluid flowing through space. This could be the air circulating in your room, water flowing through a pipe, oil spilling in the ocean, etc. We want to be able to model these types of fluid motion, but how? In contrast to solid bodies, fluids can change their shape and most likely have different physical properties throughout space <em>and</em> time (temperature, pressure, velocity, etc.).</p>
+I"9<p>Imagine a fluid flowing through space. This could be the air circulating in your room, water flowing through a pipe, oil spilling in the ocean, etc. We want to be able to model these types of fluid motion, but how? In contrast to solid bodies, fluids can change their shape and most likely have different physical properties throughout space <em>and</em> time (temperature, pressure, velocity, etc.).</p>
 
 <h2 id="control-volume">Control Volume</h2>
 
 <p>Compared to solid bodies undergoing translational motion, At first this may be tricky to think of when comparing how we solve for properties of solid things; if you throw a rock (undergoing translational motion), it will stay the same size and shape, and the velocity at each point of that rock is the same.</p>
 
 <h2 id="derivation-of-the-material-derivative">Derivation of the Material Derivative</h2>
+<h6 id="also-known-as-the-substantial-derivative">Also known as the ‘Substantial Derivative”.</h6>
 
-<p>Also known as the ‘Substantial Derivative”.</p>
+<p>Imagine an <em>infinitesimal</em> cube-shaped fluid element moving along a streamline with a velocity vector \(\boldsymbol{V}\). This teeny-tiny cube (element) has faces normal to all three axial directions (\(\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}\)). The element is infinitesimal in the sense the sides of the element are differentiable thus making a differential volume</p>
 
-<p>The fluid element is flowing through cartesian space where the unit vectors along the \(x\), \(y\), and \(z\) axes are \(\boldsymbol{i}\), \(\boldsymbol{j}\), and \(\boldsymbol{k}\), respectfully.</p>
+\[dx \cdot dy \cdot dz = dV\]
+
+<p><em>but</em> the fluid element is also large enough to contain enough fluid molecules within it so that it can be viewed as a continuum.<br />
+The fluid element is flowing through cartesian space where the unit vectors along the \(x\), \(y\), and \(z\) axes are \(\boldsymbol{i}\), \(\boldsymbol{j}\), and \(\boldsymbol{k}\), respectfully.</p>
 
 <p><img src="/img/posts/cfd-equations/fluid-elem.png" alt="Fluid Element" />
-<img src="/img/posts/cfd-equations/fluid-elem.png" /></p>
+<!-- <img src="/img/posts/cfd-equations/fluid-elem.png" /> --></p>
 
 <p>The vector field of a fluid flow is given by</p>
 
@@ -24,7 +27,7 @@
 
 \[\frac{d(property)}{dt} \ne 0\]
 
-<p>where \(property\) is the fluid’s property in question which can be velocity, temperature, density, etc. Obviously, if the flow is <em>steady</em> then the change of that property in respect to time (and still within the same location in space) will be \(0\).</p>
+<p>where \(property\) is the fluid’s property in question which can be velocity, temperature, density, etc. Obviously, if the flow is <em>steady</em> then the change of that property with respect to time (and still within the same location in space) will be \(0\).</p>
 
 <p>So, now that we have established that the fluid element’s velocity changes with time and space let’s look at another property that also will change through time and space, say density \(\rho(x, y, z, t)\).</p>
 

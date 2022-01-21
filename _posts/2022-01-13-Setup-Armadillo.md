@@ -83,6 +83,16 @@ Once you download MacPorts, open the MacPorts package. Most likely it is in your
 
 <img src="/img/posts/setup-armadillo/macports-install.png" alt="MacPorts Install" width="100%" height="auto"/>
 
+If you happen to have already installed MacPorts before and have upgraded your OS you may come accross an error like:
+
+``` 
+Error: Current platform "darwin 20" does not match expected platform "darwin 19"
+Error: If you upgraded your OS, please follow the migration instructions: https://trac.macports.org/wiki/Migration
+OS platform mismatch
+```
+
+The website <a href="https://docs.gz.ro/node/394">https://docs.gz.ro/node/394</a> has a list of terminal commands you can follow to fix this issue.
+
 # Download & Install Armadillo C++ Library
 
 Now that we *finally* have all those prerequsites out of the way, we will now download our Armadillo C++ libary. 
@@ -102,7 +112,7 @@ Now that we *finally* have all those prerequsites out of the way, we will now do
 
 * Hit ```return``` and go through the necessary prompts to finish installation
 
-The armadillo files should have been downloaded in your ```/opt/locol``` folder. To double-check, type in your terminal ```cd /opt/local/lib``` and press ```return```. Then type in ```ls``` and hit ```return``` again. You should see file names like ```libarmadillo.dylib``` and ```libhdf5.dylib``` show up as below:
+The armadillo files should have been downloaded in your ```/opt/local``` folder. To double-check, type in your terminal ```cd /opt/local/lib``` and press ```return```. Then type in ```ls``` and hit ```return``` again. You should see file names like ```libarmadillo.dylib``` and ```libhdf5.dylib``` show up as below:
 
 <center>
 <img src="/img/posts/setup-armadillo/terminal-arma-files-list.png" alt="" width="80%" height="auto"/>
@@ -228,7 +238,7 @@ In the "Sharing & Permissions" section, change the ```admin``` Privilege to ```R
 <img src="/img/posts/setup-armadillo/admin-read-write.png" alt="" width="70%" height="auto"/>
 </center>
 
-Go back to Finder and go into the ```armadillo_bits``` folder. Right-click on ```config.hpp``` file and open with Xcode. 
+Go back to Finder and go into the ```armadillo_bits``` folder. Right-click on ```config.hpp``` file and follow the same steps to change its permissions.
 
 <h5 style="color:red;">WARNING:</h5> Make sure it is just ```config.hpp``` NOT ```arma_config.hpp```.
 

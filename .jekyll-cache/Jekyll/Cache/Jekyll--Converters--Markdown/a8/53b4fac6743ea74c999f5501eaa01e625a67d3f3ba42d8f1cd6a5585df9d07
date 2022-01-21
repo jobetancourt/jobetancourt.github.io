@@ -1,4 +1,4 @@
-I"@<p>This is a simple and in-depth step-by-step guide to setting up Armadillo C++ on your Mac using Xcode IDE, command line tools, and installation via MacPorts. I will be starting from the <b> very beginning </b> assuming you were handed a factory-reset laptop with nothing installed on it. This guide will go through all the nitty-gritty details. Let’s begin!</p>
+I"�B<p>This is a simple and in-depth step-by-step guide to setting up Armadillo C++ on your Mac using Xcode IDE, command line tools, and installation via MacPorts. I will be starting from the <b> very beginning </b> assuming you were handed a factory-reset laptop with nothing installed on it. This guide will go through all the nitty-gritty details. Let’s begin!</p>
 
 <h1 id="download--install-xcode">Download &amp; Install Xcode</h1>
 
@@ -72,6 +72,15 @@
 
 <p><img src="/img/posts/setup-armadillo/macports-install.png" alt="MacPorts Install" width="100%" height="auto" /></p>
 
+<p>If you happen to have already installed MacPorts before and have upgraded your OS you may come accross an error like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: Current platform "darwin 20" does not match expected platform "darwin 19"
+Error: If you upgraded your OS, please follow the migration instructions: https://trac.macports.org/wiki/Migration
+OS platform mismatch
+</code></pre></div></div>
+
+<p>The website <a href="https://docs.gz.ro/node/394">https://docs.gz.ro/node/394</a> has a list of terminal commands you can follow to fix this issue.</p>
+
 <h1 id="download--install-armadillo-c-library">Download &amp; Install Armadillo C++ Library</h1>
 
 <p>Now that we <em>finally</em> have all those prerequsites out of the way, we will now download our Armadillo C++ libary.</p>
@@ -99,7 +108,7 @@
   <li>Hit <code class="language-plaintext highlighter-rouge">return</code> and go through the necessary prompts to finish installation</li>
 </ul>
 
-<p>The armadillo files should have been downloaded in your <code class="language-plaintext highlighter-rouge">/opt/locol</code> folder. To double-check, type in your terminal <code class="language-plaintext highlighter-rouge">cd /opt/local/lib</code> and press <code class="language-plaintext highlighter-rouge">return</code>. Then type in <code class="language-plaintext highlighter-rouge">ls</code> and hit <code class="language-plaintext highlighter-rouge">return</code> again. You should see file names like <code class="language-plaintext highlighter-rouge">libarmadillo.dylib</code> and <code class="language-plaintext highlighter-rouge">libhdf5.dylib</code> show up as below:</p>
+<p>The armadillo files should have been downloaded in your <code class="language-plaintext highlighter-rouge">/opt/local</code> folder. To double-check, type in your terminal <code class="language-plaintext highlighter-rouge">cd /opt/local/lib</code> and press <code class="language-plaintext highlighter-rouge">return</code>. Then type in <code class="language-plaintext highlighter-rouge">ls</code> and hit <code class="language-plaintext highlighter-rouge">return</code> again. You should see file names like <code class="language-plaintext highlighter-rouge">libarmadillo.dylib</code> and <code class="language-plaintext highlighter-rouge">libhdf5.dylib</code> show up as below:</p>
 
 <center>
 <img src="/img/posts/setup-armadillo/terminal-arma-files-list.png" alt="" width="80%" height="auto" />
@@ -225,7 +234,7 @@ In the “Language” dropdown select <code class="language-plaintext highlighte
 <img src="/img/posts/setup-armadillo/admin-read-write.png" alt="" width="70%" height="auto" />
 </center>
 
-<p>Go back to Finder and go into the <code class="language-plaintext highlighter-rouge">armadillo_bits</code> folder. Right-click on <code class="language-plaintext highlighter-rouge">config.hpp</code> file and open with Xcode.</p>
+<p>Go back to Finder and go into the <code class="language-plaintext highlighter-rouge">armadillo_bits</code> folder. Right-click on <code class="language-plaintext highlighter-rouge">config.hpp</code> file and follow the same steps to change its permissions.</p>
 
 <h5 style="color:red;">WARNING:</h5>
 <p>Make sure it is just <code class="language-plaintext highlighter-rouge">config.hpp</code> NOT <code class="language-plaintext highlighter-rouge">arma_config.hpp</code>.</p>
